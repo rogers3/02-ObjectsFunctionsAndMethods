@@ -23,6 +23,7 @@ import math
 
 def main():
     print(pythagoreanTheorem(3,4))
+    makeTurtle('red', 10)
 
 
 ###############################################################################
@@ -44,7 +45,7 @@ def pythagoreanTheorem(side1, side2):
     return hypotenuse
 
 ###############################################################################
-# TODO: 4a.  Define a function immediately below this _TODO_.
+# DONE: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
@@ -66,16 +67,28 @@ def pythagoreanTheorem(side1, side2):
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function at least TWICE (with different values
+# DONE: 4b.  In main, CALL your function at least TWICE (with different values
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
 
 def makeTurtle(color, thickness):
-    rg.Turtle=Simple
+    window = rg.TurtleWindow()
+    turtle1=rg.SimpleTurtle('turtle')
+    turtle1.pen=rg.Pen("green", thickness)
+    print(color)
+    turtle2 = rg.SimpleTurtle('turtle')
+    turtle2.pen =rg.Pen(color, 5)
+
+    turtle1.forward(100)
+    turtle2.backward(100)
+    window.close_on_mouse_click()
+
+
+
 
 ###############################################################################
-# TODO: 5.
+# DONE: 5.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
